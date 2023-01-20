@@ -6,7 +6,7 @@ turtle.speed("fast")
 turtle.pensize(2)
 turtle.pencolor("green")
 turtle.penup()
-turtle.setpos(0,-0.4*turtle.window_height())
+turtle.setpos(0, -0.4 * turtle.window_height())
 turtle.pendown()
 
 
@@ -16,21 +16,23 @@ def leaf_of_tree(distance):
     turtle.forward(distance)
     turtle.right(180)
 
+
 def branch_of_tree(distance, angle):
-    if distance>20:
-        turtle.forward(distance/2)
+    if distance > 20:
+        turtle.forward(distance / 2)
         turtle.right(angle)
-        branch_of_tree(distance / 2, angle *2/ 3)
+        branch_of_tree(distance / 2, angle * 2 / 3)
         turtle.left(angle)
-        branch_of_tree(distance/2, angle *2/ 3)
+        branch_of_tree(distance / 2, angle * 2 / 3)
         turtle.left(angle)
-        branch_of_tree(distance / 2, angle *2/3)
+        branch_of_tree(distance / 2, angle * 2 / 3)
         turtle.right(angle)
         turtle.right(180)
-        turtle.forward(distance/2)
+        turtle.forward(distance / 2)
         turtle.right(180)
     else:
         leaf_of_tree(distance)
 
-branch_of_tree( 200, 60)
-w=input("Press Enter")
+
+branch_of_tree(200, 60)
+w = input("Press Enter")
